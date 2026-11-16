@@ -25,14 +25,15 @@
       <stop offset="100%" stop-color="#C5D101"/>
     </linearGradient>
 
-    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#21B4B0"/>
-      <stop offset="100%" stop-color="#148D8A"/>
+    <!-- Cool Gray / Indigo gradients from exact palette -->
+    <linearGradient id="coolGrayGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5E5E7"/>
+      <stop offset="100%" stop-color="#D5D5D7"/>
     </linearGradient>
 
     <linearGradient id="pantsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5577D4"/>
-      <stop offset="100%" stop-color="#3552A8"/>
+      <stop offset="0%" stop-color="#4A3274"/>
+      <stop offset="100%" stop-color="#342055"/>
     </linearGradient>
   </defs>
 
@@ -45,7 +46,7 @@
   <path d="M480,75 C495,60 515,65 510,85 C505,105 480,100 485,80 C490,60 510,55 525,70" stroke="#342055" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.4"/>
   
   <!-- Tiny triangle -->
-  <polygon points="260,300 270,316 250,316" fill="#5577D4" opacity="0.7"/>
+  <polygon points="260,300 270,316 250,316" fill="#342055" opacity="0.5"/>
 
   <!-- Small lime circle -->
   <circle cx="250" cy="400" r="6" fill="#C5D101"/>
@@ -71,10 +72,10 @@
   <!-- Top Block (Lime Green / Gold) -->
   <rect x="330" y="340" width="60" height="50" rx="4" fill="url(#accentLime)"/>
   
-  <!-- Bottom Left Block (Teal / Cyan) -->
-  <rect x="330" y="390" width="60" height="50" rx="4" fill="url(#tealGrad)"/>
+  <!-- Bottom Left Block (Indigo) -->
+  <rect x="330" y="390" width="60" height="50" rx="4" fill="url(#indigoGrad)"/>
   
-  <!-- Bottom Right Block (Magenta / Coral) -->
+  <!-- Bottom Right Block (Magenta) -->
   <rect x="390" y="390" width="60" height="50" rx="4" fill="url(#magentaGrad)"/>
 
   <!-- Character Back Leg / Foot -->
@@ -125,8 +126,8 @@
   <!-- Modern Telescope looking forward -->
   <!-- Eyepiece -->
   <rect x="375" y="244" width="8" height="8" rx="2" fill="#342055"/>
-  <!-- Telescope Body (Teal / Lime accents) -->
-  <path d="M295,244 L375,245 L375,251 L295,253 Z" fill="url(#tealGrad)"/>
+  <!-- Telescope Body (Indigo / Lime accents) -->
+  <path d="M295,244 L375,245 L375,251 L295,253 Z" fill="url(#indigoGrad)"/>
   <!-- Front Rim / Lens -->
   <rect x="290" y="242" width="6" height="12" rx="2" fill="url(#accentLime)"/>
   <ellipse cx="290" cy="248" rx="2" ry="6" fill="#FFFFFF"/>
