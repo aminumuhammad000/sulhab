@@ -52,7 +52,17 @@
 
   <!-- Page Header -->
   <section class="page-header-section">
-    <div class="container">
+    <!-- Ambient doodles matching hero -->
+    <div class="section-doodles" aria-hidden="true">
+      <div class="sec-doodle-dot" style="top: 15%; right: 10%;"></div>
+      <div class="sec-doodle-loop" style="bottom: 15%; left: 6%;">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M6 26C12 10 24 8 26 18C28 26 14 28 14 16C14 6 24 4 28 8" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 2;">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../index.html">Home</a>
         <span class="breadcrumb-separator">/</span>
@@ -60,8 +70,10 @@
         <span class="breadcrumb-separator">/</span>
         <span>Community Development & Social Impact</span>
       </nav>
-      <span class="tagline-accent">Strategic Area 04</span>
-      <h1 class="page-header-title">Community Development & Social Impact</h1>
+      <span class="hero-pill-tag">Strategic Area 04</span>
+      <h1 class="page-header-title">
+        Community Development & <br><span class="highlight-magenta">Social Impact</span>
+      </h1>
       <p class="page-header-lead">
         Working with communities to understand their challenges, identify opportunities and support practical initiatives that improve lives and contribute to sustainable community development.
       </p>
@@ -139,12 +151,12 @@
             </nav>
           </div>
 
-          <div class="sidebar-card" style="background-color: var(--color-primary-subtle); border-color: var(--color-primary-border);">
+          <div class="sidebar-card" style="background-color: #FAF9F8; border-color: rgba(228, 31, 111, 0.25);">
             <h4>Explore a Community Partnership</h4>
-            <p style="font-size: 0.9rem; margin-bottom: 1.25rem;">
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; color: #635F70;">
               Are you an NGO, community leader, or development institution seeking aligned collaboration?
             </p>
-            <a href="../index.html#contact" class="btn btn-primary btn-sm" style="width: 100%;">Discuss Partnership</a>
+            <a href="../index.html#contact" class="btn-pill-primary" style="width: 100%;">Discuss Partnership</a>
           </div>
         </aside>
       </div>
