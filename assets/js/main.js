@@ -3,7 +3,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Menu Toggle
+  // Sticky Header on Scroll (Reveals smoothly once past hero canvas)
+  const siteHeader = document.querySelector('.site-header');
+  const heroCard = document.querySelector('.hero-card-frame');
+
+  if (siteHeader && heroCard) {
+    window.addEventListener('scroll', () => {
+      const heroBottom = heroCard.getBoundingClientRect().bottom;
+      if (heroBottom < 60) {
+        siteHeader.classList.add('is-sticky');
+      } else {
+        siteHeader.classList.remove('is-sticky');
+      }
+    }, { passive: true });
+  }
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
 

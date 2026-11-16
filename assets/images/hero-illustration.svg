@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 520" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Soft warm background gradient -->
+    <radialGradient id="bgWarmGlow" cx="60%" cy="50%" r="50%" fx="60%" fy="50%">
+      <stop offset="0%" stop-color="#FFEFE8" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#FFF5F0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Indigo gradient for blocks -->
+    <linearGradient id="indigoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A2F78"/>
+      <stop offset="100%" stop-color="#342055"/>
+    </linearGradient>
+
+    <!-- Magenta gradient for jacket/highlights -->
+    <linearGradient id="magentaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3888"/>
+      <stop offset="100%" stop-color="#E41F6F"/>
+    </linearGradient>
+
+    <!-- Accent lime / teal gradients -->
+    <linearGradient id="accentLime" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DCE813"/>
+      <stop offset="100%" stop-color="#C5D101"/>
+    </linearGradient>
+
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#21B4B0"/>
+      <stop offset="100%" stop-color="#148D8A"/>
+    </linearGradient>
+
+    <linearGradient id="pantsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5577D4"/>
+      <stop offset="100%" stop-color="#3552A8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Large soft circular/organic backdrop -->
+  <circle cx="390" cy="250" r="210" fill="url(#bgWarmGlow)" />
+  <path d="M430,90 C510,120 560,200 540,290 C520,380 440,430 350,420 C260,410 210,340 220,250 C230,160 350,60 430,90 Z" fill="#FFF1E8" opacity="0.6"/>
+
+  <!-- Decorative background elements & doodles -->
+  <!-- Floating scribble loop at top right -->
+  <path d="M480,75 C495,60 515,65 510,85 C505,105 480,100 485,80 C490,60 510,55 525,70" stroke="#342055" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+  
+  <!-- Tiny triangle -->
+  <polygon points="260,300 270,316 250,316" fill="#5577D4" opacity="0.7"/>
+
+  <!-- Small lime circle -->
+  <circle cx="250" cy="400" r="6" fill="#C5D101"/>
+
+  <!-- Small cross/plus marks -->
+  <g transform="translate(500, 390)" stroke="#E41F6F" stroke-width="3" stroke-linecap="round">
+    <line x1="-8" y1="-8" x2="8" y2="8"/>
+    <line x1="8" y1="-8" x2="-8" y2="8"/>
+  </g>
+  <g transform="translate(490, 290)" stroke="#342055" stroke-width="1.8" stroke-linecap="round" opacity="0.3">
+    <line x1="0" y1="-8" x2="0" y2="8"/>
+    <line x1="-8" y1="0" x2="8" y2="0"/>
+  </g>
+
+  <!-- Subtle cloud/wave lines behind -->
+  <path d="M490,260 Q515,255 540,265" stroke="#F0D0C5" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M475,275 Q505,270 535,280" stroke="#F0D0C5" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Ground baseline -->
+  <line x1="220" y1="440" x2="490" y2="440" stroke="#1B1327" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Geometric Blocks the character sits on -->
+  <!-- Top Block (Lime Green / Gold) -->
+  <rect x="330" y="340" width="60" height="50" rx="4" fill="url(#accentLime)"/>
+  
+  <!-- Bottom Left Block (Teal / Cyan) -->
+  <rect x="330" y="390" width="60" height="50" rx="4" fill="url(#tealGrad)"/>
+  
+  <!-- Bottom Right Block (Magenta / Coral) -->
+  <rect x="390" y="390" width="60" height="50" rx="4" fill="url(#magentaGrad)"/>
+
+  <!-- Character Back Leg / Foot -->
+  <path d="M360,375 L380,430 L400,438 L370,440 Z" fill="#201535"/>
+
+  <!-- Character Main Body & Torso -->
+  <!-- Torso & Magenta Jacket -->
+  <path d="M355,270 C345,280 320,310 320,345 C320,380 345,395 380,395 C410,395 425,370 425,335 C425,295 390,265 375,260 Z" fill="url(#magentaGrad)"/>
+
+  <!-- Collar / Inner White Shirt -->
+  <path d="M370,260 L380,278 L390,262 Z" fill="#FFFFFF"/>
+  <path d="M363,258 L373,275 L366,277 Z" fill="#FFF1E8"/>
+
+  <!-- Blue Trousers & Bent Legs -->
+  <path d="M345,340 C345,340 375,345 390,370 C405,395 440,415 450,425 L435,438 C420,425 385,395 370,380 C355,365 340,360 340,345 Z" fill="url(#pantsGrad)"/>
+  
+  <!-- Front leg extending down to block -->
+  <path d="M360,350 L315,410 L260,438 L250,430 L300,395 L340,340 Z" fill="url(#pantsGrad)"/>
+
+  <!-- Left Shoe / Foot (pointed sleekly) -->
+  <polygon points="255,435 240,440 280,440 270,430" fill="#1B1327"/>
+  <!-- Right Shoe / Heel -->
+  <polygon points="445,430 460,438 438,440 435,435" fill="#1B1327"/>
+
+  <!-- Head & Hair -->
+  <!-- Neck -->
+  <path d="M375,245 L385,260 L395,255 L385,240 Z" fill="#FFD1BA"/>
+
+  <!-- Face profile facing left with telescope -->
+  <path d="M375,230 C370,235 370,248 378,252 C386,256 395,250 395,240 C395,230 385,225 375,230 Z" fill="#FFD1BA"/>
+  <!-- Ear -->
+  <circle cx="388" cy="242" r="4" fill="#F0BAA0"/>
+
+  <!-- Flowing Stylized Dark Indigo Hair -->
+  <path d="M380,225 C365,222 360,235 365,245 C370,250 368,260 360,265 C355,255 358,240 365,230 C372,220 385,215 400,218 C415,220 425,230 435,232 C450,235 460,225 470,230 C475,233 478,242 470,248 C458,255 445,245 432,246 C420,247 415,258 402,258 C392,258 388,245 388,235 Z" fill="#201535"/>
+
+  <!-- Arm holding the telescope forward -->
+  <!-- Back Arm & Hand -->
+  <path d="M375,280 C360,285 340,290 330,270 C325,260 340,248 355,250 L362,258 Z" fill="#D81764"/>
+  <path d="M355,250 L368,248 L370,254 L357,256 Z" fill="#FFD1BA"/>
+
+  <!-- Forearm & Hand holding telescope -->
+  <path d="M385,275 C370,280 340,270 330,260 L335,250 C345,260 368,265 380,262 Z" fill="url(#magentaGrad)"/>
+  <!-- Hand at telescope -->
+  <ellipse cx="360" cy="250" rx="6" ry="5" fill="#FFD1BA"/>
+  <ellipse cx="372" cy="248" rx="5" ry="4" fill="#FFD1BA"/>
+
+  <!-- Modern Telescope looking forward -->
+  <!-- Eyepiece -->
+  <rect x="375" y="244" width="8" height="8" rx="2" fill="#342055"/>
+  <!-- Telescope Body (Teal / Lime accents) -->
+  <path d="M295,244 L375,245 L375,251 L295,253 Z" fill="url(#tealGrad)"/>
+  <!-- Front Rim / Lens -->
+  <rect x="290" y="242" width="6" height="12" rx="2" fill="url(#accentLime)"/>
+  <ellipse cx="290" cy="248" rx="2" ry="6" fill="#FFFFFF"/>
+
+  <!-- Beam / Vision spark from telescope -->
+  <line x1="280" y1="248" x2="220" y2="248" stroke="#C5D101" stroke-width="2" stroke-dasharray="4 4" opacity="0.8"/>
+  <polygon points="215,248 223,244 223,252" fill="#C5D101"/>
+
+  <!-- Floating little sparkle near telescope -->
+  <path d="M305,225 L308,233 L316,236 L308,239 L305,247 L302,239 L294,236 L302,233 Z" fill="#E41F6F" opacity="0.8"/>
+</svg>
