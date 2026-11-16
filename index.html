@@ -12,14 +12,14 @@
 </head>
 <body>
 
-  <!-- Site Header -->
+  <!-- Sticky Site Header (Reveals on Scroll Past Hero) -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo-wrap" aria-label="Sulhab Creative Home">
         <img src="assets/images/logo.png" alt="Sulhab Creative" class="brand-logo">
       </a>
       
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggleSticky" aria-label="Toggle Navigation" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -27,7 +27,7 @@
         </svg>
       </button>
 
-      <nav class="nav-menu" id="navMenu">
+      <nav class="nav-menu" id="navMenuSticky">
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About Us</a>
         <div class="nav-dropdown">
@@ -50,54 +50,50 @@
     </div>
   </header>
 
-  <!-- 1. Hero Stage (Adapted from hero.jpeg with Sulhab Logo, Colors, Navs and Illustration) -->
-  <section class="hero-stage-outer" id="hero">
+  <!-- 1. Full-Screen Hero Section (100vh) Adapted from hero.jpeg -->
+  <section class="hero-fullscreen" id="hero">
     
     <!-- Ambient doodles / background shapes like hero.jpeg -->
-    <div class="hero-stage-doodles" aria-hidden="true">
-      <div class="doodle doodle-dot-yellow"></div>
-      <div class="doodle doodle-loop-coral">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2.5">
+    <div class="hero-doodles" aria-hidden="true">
+      <div class="hero-doodle hero-doodle-dot-yellow"></div>
+      <div class="hero-doodle hero-doodle-loop-coral">
+        <svg width="36" height="36" viewBox="0 0 34 34" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M6 26C12 10 24 8 26 18C28 26 14 28 14 16C14 6 24 4 28 8" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="doodle doodle-ribbon-left">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">
+      <div class="hero-doodle hero-doodle-ribbon-left">
+        <svg width="50" height="50" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3">
           <path d="M10 40C16 16 32 12 36 24C40 36 20 38 22 20" stroke-linecap="round"/>
         </svg>
       </div>
-      <div class="doodle doodle-star-right">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <polygon points="12,2 15,9 22,12 15,15 12,22 9,15 2,12 9,9"/>
+      <div class="hero-doodle hero-doodle-plus">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
       </div>
     </div>
 
-    <!-- Top Presentation Banner -->
-    <div class="hero-top-banner">
-      <div class="hero-top-brand">
-        <img src="assets/images/logo-white.png" alt="Sulhab Creative Icon">
-        <span>Sulhab Creative</span>
-      </div>
-      <p class="hero-top-subtext">
-        Beyond Potential. Towards Transformation. • Learning · Development · Innovation · Impact
-      </p>
-    </div>
-
-    <!-- Main Floating White Card Canvas -->
-    <div class="hero-card-frame">
-      
-      <!-- Card Internal Navigation -->
-      <nav class="card-nav" aria-label="Main Navigation">
-        <a href="index.html" class="card-brand" aria-label="Sulhab Creative Home">
+    <!-- Hero Navigation Bar (Full Width at Top of Viewport) -->
+    <header class="hero-navbar-wrap">
+      <div class="container hero-navbar-inner">
+        <a href="index.html" class="hero-nav-brand" aria-label="Sulhab Creative Home">
           <img src="assets/images/logo.png" alt="Sulhab Creative">
         </a>
 
-        <div class="card-nav-links">
-          <a href="#hero" class="card-nav-link active">Home</a>
-          <a href="#about" class="card-nav-link">About Us</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <nav class="hero-nav-links" id="navMenu">
+          <a href="#hero" class="hero-nav-link active">Home</a>
+          <a href="#about" class="hero-nav-link">About Us</a>
           <div class="nav-dropdown">
-            <button class="dropdown-trigger" style="font-size: 0.95rem; color: #524F5D;">
+            <button class="dropdown-trigger" style="font-size: 0.98rem; color: #524F5D;">
               Strategic Areas
               <span class="dropdown-icon">▾</span>
             </button>
@@ -108,50 +104,63 @@
               <a href="services/community-development.html" class="dropdown-link">Community Development</a>
             </div>
           </div>
-          <a href="#contact" class="card-nav-link">Contact</a>
-        </div>
+          <a href="#contact" class="hero-nav-link">Contact</a>
+        </nav>
 
-        <a href="#contact" class="card-nav-cta">Join now</a>
-      </nav>
-
-      <!-- Card Hero Split Content -->
-      <div class="card-hero-body">
-        
-        <!-- Left Column: Copy & Actions -->
-        <div class="card-hero-content">
-          <span class="hero-pill-tag">Beyond Potential</span>
-          
-          <h1 class="card-hero-title">
-            Looking to <br>
-            <span class="highlight-magenta">Transform Potential?</span>
-            Join with Sulhab
-          </h1>
-
-          <p class="card-hero-desc">
-            To help people turn their potential into real skills, meaningful opportunities and positive change through structured learning, enterprise support, and community innovation.
-          </p>
-
-          <div class="card-hero-actions">
-            <a href="#services" class="btn-pill-primary">
-              Get Started
-            </a>
-            <a href="#about" class="btn-pill-secondary">
-              How it works
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Vector Illustration matching hero.jpeg composition -->
-        <div class="card-hero-visual">
-          <img src="assets/images/hero-illustration.svg" alt="Sulhab Creative - Transformation and Future Vision" class="hero-illustration-svg">
-        </div>
-
+        <a href="#contact" class="hero-nav-cta">Join now</a>
       </div>
+    </header>
 
+    <!-- Full-Screen Hero Centered Body -->
+    <div class="hero-fullscreen-body">
+      <div class="container">
+        <div class="hero-fullscreen-grid">
+          
+          <!-- Left Column: Copy & Actions -->
+          <div class="hero-content-col">
+            <span class="hero-pill-tag">Beyond Potential</span>
+            
+            <h1 class="hero-main-title">
+              Looking to <br>
+              <span class="highlight-magenta">Transform Potential?</span>
+              Join with Sulhab
+            </h1>
+
+            <p class="hero-main-desc">
+              To help people turn their potential into real skills, meaningful opportunities and positive change through structured learning, enterprise support, and community innovation.
+            </p>
+
+            <div class="hero-main-actions">
+              <a href="#services" class="btn-pill-primary">
+                Get Started
+              </a>
+              <a href="#about" class="btn-pill-secondary">
+                How it works
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Vector Illustration matching hero.jpeg composition -->
+          <div class="hero-visual-col">
+            <img src="assets/images/hero-illustration.svg" alt="Sulhab Creative - Transformation and Future Vision" class="hero-illustration-svg">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle Scroll Cue -->
+    <div class="hero-scroll-cue">
+      <a href="#about" class="hero-scroll-link" aria-label="Scroll to About section">
+        <span>Explore</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
     </div>
 
   </section>
