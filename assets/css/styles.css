@@ -428,16 +428,6 @@ p {
   pointer-events: none;
 }
 
-.hero-doodle-dot-yellow {
-  top: 18%;
-  left: 6%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  opacity: 0.85;
-}
-
 .hero-doodle-loop-coral {
   top: 16%;
   right: 8%;
@@ -718,15 +708,6 @@ p {
   inset: 0;
   pointer-events: none;
   z-index: 1;
-}
-
-.sec-doodle-dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-accent);
-  opacity: 0.7;
 }
 
 .sec-doodle-loop {
