@@ -424,14 +424,15 @@ body.nav-open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #FFFFFF;
+  background-color: #342055;
   background-image: 
-    radial-gradient(circle at 85% 35%, rgba(74, 48, 120, 0.08) 0%, transparent 55%),
-    radial-gradient(circle at 12% 20%, rgba(52, 32, 85, 0.06) 0%, transparent 45%),
-    radial-gradient(circle at 70% 85%, rgba(52, 32, 85, 0.04) 0%, transparent 45%);
+    radial-gradient(circle at 85% 35%, rgba(255, 56, 136, 0.2) 0%, transparent 55%),
+    radial-gradient(circle at 14% 20%, rgba(94, 53, 150, 0.5) 0%, transparent 50%),
+    radial-gradient(circle at 55% 85%, rgba(255, 143, 80, 0.15) 0%, transparent 45%),
+    linear-gradient(142deg, #3B2360 0%, #342055 50%, #201335 100%);
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Ambient Doodles floating in the full-screen hero (Aligned & Fit) */
@@ -450,30 +451,31 @@ body.nav-open {
 .hero-doodle-loop-coral {
   top: 16%;
   right: 8%;
-  color: var(--color-primary);
-  opacity: 0.55;
+  color: #FF6EA7;
+  opacity: 0.8;
 }
 
 .hero-doodle-ribbon-left {
   bottom: 14%;
   left: 4%;
-  color: var(--color-primary-light);
-  opacity: 0.45;
+  color: #FFA07A;
+  opacity: 0.75;
 }
 
 .hero-doodle-plus {
   top: 48%;
   left: 47%;
-  color: var(--color-primary-light);
-  opacity: 0.5;
+  color: #FF559D;
+  opacity: 0.8;
 }
 
 /* Hero Top Navigation Bar (Full Width) */
 .hero-navbar-wrap {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #F0EFF4;
+  background-color: rgba(52, 32, 85, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   z-index: 10;
 }
@@ -505,15 +507,27 @@ body.nav-open {
 .hero-nav-link {
   font-size: 0.98rem;
   font-weight: 500;
-  color: #524F5D;
+  color: rgba(255, 255, 255, 0.88);
   transition: var(--transition);
   position: relative;
 }
 
 .hero-nav-link:hover,
 .hero-nav-link.active {
-  color: var(--color-primary);
+  color: #FFFFFF;
   font-weight: 600;
+}
+
+.hero-navbar-wrap .dropdown-trigger {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-navbar-wrap .dropdown-trigger:hover {
+  color: #FFFFFF;
+}
+
+.hero-navbar-wrap .dropdown-icon {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .hero-nav-cta {
@@ -522,19 +536,32 @@ body.nav-open {
   justify-content: center;
   padding: 0.6rem 1.6rem;
   border-radius: var(--radius-full);
-  border: 1.5px solid rgba(52, 32, 85, 0.4);
-  color: var(--color-primary);
+  border: 1.5px solid transparent;
+  color: #FFFFFF;
   font-size: 0.95rem;
-  font-weight: 600;
-  background-color: transparent;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF3888 0%, #E41F6F 100%);
+  box-shadow: 0 4px 14px rgba(228, 31, 111, 0.4);
   transition: var(--transition);
 }
 
 .hero-nav-cta:hover {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #FF559D 0%, #F5186E 100%);
   color: #FFFFFF;
-  border-color: var(--color-primary);
-  box-shadow: 0 6px 18px rgba(52, 32, 85, 0.25);
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(228, 31, 111, 0.55);
+}
+
+.hero-navbar-wrap .menu-toggle {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+.hero-navbar-wrap .menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .hero-navbar-actions {
@@ -596,25 +623,33 @@ body.nav-open {
 .hero-main-title {
   font-size: 3.6rem;
   line-height: 1.14;
-  color: #1B1327;
+  color: #FFFFFF;
   font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 1.35rem;
 }
 
+.hero-main-title .highlight-pink,
 .hero-main-title .highlight-magenta,
 .hero-main-title .highlight-purple {
-  color: var(--color-primary);
-  background: linear-gradient(135deg, #573391 0%, #342055 100%);
+  color: #FF3888;
+  background: linear-gradient(135deg, #FF6EA7 0%, #FF2E79 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
 }
 
+.hero-main-title .highlight-coral {
+  color: #FFB074;
+  background: linear-gradient(135deg, #FFD188 0%, #FF9E64 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .hero-main-desc {
   font-size: 1.12rem;
   line-height: 1.7;
-  color: #5D596B;
+  color: #E2DCED;
   margin-bottom: 2.25rem;
 }
 
@@ -645,6 +680,38 @@ body.nav-open {
   background: linear-gradient(135deg, #593593 0%, #291745 100%);
   box-shadow: 0 12px 28px rgba(52, 32, 85, 0.38);
   color: #FFFFFF;
+}
+
+/* Hero Specific Pill Buttons on Purple Canvas */
+.hero-fullscreen .btn-pill-primary {
+  background: linear-gradient(135deg, #FF3888 0%, #E41F6F 100%);
+  box-shadow: 0 8px 24px rgba(228, 31, 111, 0.42);
+  color: #FFFFFF;
+}
+
+.hero-fullscreen .btn-pill-primary:hover {
+  background: linear-gradient(135deg, #FF559D 0%, #F5186E 100%);
+  box-shadow: 0 12px 28px rgba(228, 31, 111, 0.58);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.hero-fullscreen .btn-pill-secondary {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+  border-radius: var(--radius-full);
+  padding: 0.85rem 1.8rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-fullscreen .btn-pill-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
+  gap: 12px;
+  transform: translateY(-2px);
 }
 
 .btn-pill-secondary {
@@ -695,14 +762,14 @@ body.nav-open {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-light);
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.72);
+  opacity: 0.8;
   transition: var(--transition);
 }
 
 .hero-scroll-link:hover {
   opacity: 1;
-  color: var(--color-primary);
+  color: #FF6EA7;
   transform: translateY(2px);
 }
 
@@ -1356,6 +1423,19 @@ textarea.form-control-pill {
   padding-top: 2.5rem;
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-rc {
+  display: inline-block;
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #FFA0C5;
+  background: rgba(228, 31, 111, 0.16);
+  border: 1px solid rgba(228, 31, 111, 0.35);
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
 }
 
 /* ==========================================================================
