@@ -1138,6 +1138,43 @@ body.nav-open {
   color: var(--color-secondary);
 }
 
+/* WhatsApp Direct Action Button */
+.btn-whatsapp-chat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: #25D366;
+  background-image: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  width: 100%;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+  transition: var(--transition);
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-whatsapp-chat:hover {
+  background-image: linear-gradient(135deg, #2CE570 0%, #20BA5A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  color: #FFFFFF !important;
+}
+
+.btn-whatsapp-chat:active {
+  transform: translateY(0);
+}
+
+.btn-whatsapp-chat svg {
+  flex-shrink: 0;
+}
+
 .contact-privacy-pill {
   background-color: #F3F2F6;
   border-radius: 14px;
