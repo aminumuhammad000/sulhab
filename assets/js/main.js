@@ -120,31 +120,48 @@ document.addEventListener('DOMContentLoaded', () => {
   setupMobileMenu('menuToggle', 'navMenu');
   setupMobileMenu('menuToggleSticky', 'navMenuSticky');
 
-  // Enquiry / Contact Form Handling
+  // Enquiry / Contact Form Handling (Web3Forms Submission)
   const enquiryForm = document.getElementById('enquiryForm');
   const formSuccess = document.getElementById('formSuccess');
 
   if (enquiryForm) {
-    enquiryForm.addEventListener('submit', (e) => {
+    enquiryForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       
       const submitBtn = enquiryForm.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Submitting Enquiry...';
+      submitBtn.textContent = 'Sending Enquiry...';
 
-      setTimeout(() => {
-        enquiryForm.reset();
+      const formData = new FormData(enquiryForm);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          enquiryForm.reset();
+          if (formSuccess) {
+            formSuccess.textContent = 'Thank you for reaching out! Your message has been sent successfully. Our team will connect with you shortly.';
+            formSuccess.style.display = 'block';
+            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+              formSuccess.style.display = 'none';
+            }, 8000);
+          }
+        } else {
+          alert(result.message || 'Unable to send message right now. Please try again or reach out directly via WhatsApp.');
+        }
+      } catch (err) {
+        // Fallback: standard POST submit if fetch encounters a network or CORS issue
+        enquiryForm.submit();
+      } finally {
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
-        if (formSuccess) {
-          formSuccess.style.display = 'block';
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          setTimeout(() => {
-            formSuccess.style.display = 'none';
-          }, 8000);
-        }
-      }, 700);
+      }
     });
   }
 });

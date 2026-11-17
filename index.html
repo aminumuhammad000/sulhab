@@ -511,32 +511,38 @@
             Thank you for reaching out. Your enquiry has been recorded. Our team will connect with you shortly.
           </div>
 
-          <form id="enquiryForm" action="#" method="POST">
+          <form id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key & Settings -->
+            <input type="hidden" name="access_key" value="03e6ee9a-aee9-48f2-916b-a753da5930ca">
+            <input type="hidden" name="subject" value="New Website Enquiry — Sulhab Creative">
+            <input type="hidden" name="from_name" value="Sulhab Creative Website">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="form-group">
               <label for="fullName">Full Name *</label>
-              <input type="text" id="fullName" name="fullName" class="form-control-pill" placeholder="Your full name" required>
+              <input type="text" id="fullName" name="name" class="form-control-pill" placeholder="Your full name" required>
             </div>
 
             <div class="form-group">
               <label for="emailAddress">Email Address *</label>
-              <input type="email" id="emailAddress" name="emailAddress" class="form-control-pill" placeholder="your.name@example.com" required>
+              <input type="email" id="emailAddress" name="email" class="form-control-pill" placeholder="your.name@example.com" required>
             </div>
 
             <div class="form-group">
               <label for="whatsappNumber">WhatsApp Number <span style="font-weight: 400; font-size: 0.82rem; color: #8C8899;">(Optional)</span></label>
-              <input type="tel" id="whatsappNumber" name="whatsappNumber" class="form-control-pill" placeholder="+234 ...">
+              <input type="tel" id="whatsappNumber" name="phone" class="form-control-pill" placeholder="+234 ...">
             </div>
 
             <div class="form-group">
               <label for="inquiryType">Area of Interest *</label>
-              <select id="inquiryType" name="inquiryType" class="form-control-pill" required>
+              <select id="inquiryType" name="area_of_interest" class="form-control-pill" required>
                 <option value="" disabled selected>Select an area...</option>
-                <option value="sponsor">Sponsor a Learner (Academy)</option>
-                <option value="learning">Learning & Development</option>
-                <option value="career">Career Development</option>
-                <option value="womens-enterprise">Women's Enterprise</option>
-                <option value="community">Community Development</option>
-                <option value="general">General Inquiries</option>
+                <option value="Sponsor a Learner (Academy)">Sponsor a Learner (Academy)</option>
+                <option value="Learning & Development">Learning & Development</option>
+                <option value="Career Development">Career Development</option>
+                <option value="Women's Enterprise">Women's Enterprise</option>
+                <option value="Community Development">Community Development</option>
+                <option value="General Inquiries">General Inquiries</option>
               </select>
             </div>
 
