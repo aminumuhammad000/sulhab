@@ -18,21 +18,13 @@
       <a href="index.html" class="brand-logo-wrap" aria-label="Sulhab Creative Home">
         <img src="assets/images/logo.png" alt="Sulhab Creative" class="brand-logo">
       </a>
-      
-      <button class="menu-toggle" id="menuToggleSticky" aria-label="Toggle Navigation" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
 
       <nav class="nav-menu" id="navMenuSticky">
         <a href="#hero" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About Us</a>
         <div class="nav-dropdown">
-          <button class="dropdown-trigger">
-            What We Do
+          <button class="dropdown-trigger" type="button" aria-expanded="false">
+            Strategic Areas
             <span class="dropdown-icon">▾</span>
           </button>
           <div class="dropdown-menu">
@@ -43,10 +35,21 @@
           </div>
         </div>
         <a href="#contact" class="nav-link">Contact</a>
-        <div class="nav-actions">
-          <a href="#contact" class="btn btn-primary btn-sm">Get Involved</a>
+        <div class="nav-mobile-cta">
+          <a href="#contact" class="btn btn-primary btn-full">Get Involved</a>
         </div>
       </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm nav-desktop-cta">Get Involved</a>
+        <button class="menu-toggle" id="menuToggleSticky" aria-label="Toggle Navigation" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -80,19 +83,11 @@
           <img src="assets/images/logo.png" alt="Sulhab Creative">
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-
         <nav class="hero-nav-links" id="navMenu">
           <a href="#hero" class="hero-nav-link active">Home</a>
           <a href="#about" class="hero-nav-link">About Us</a>
           <div class="nav-dropdown">
-            <button class="dropdown-trigger" style="font-size: 0.98rem; color: #524F5D;">
+            <button class="dropdown-trigger" type="button" aria-expanded="false">
               Strategic Areas
               <span class="dropdown-icon">▾</span>
             </button>
@@ -104,9 +99,21 @@
             </div>
           </div>
           <a href="#contact" class="hero-nav-link">Contact</a>
+          <div class="nav-mobile-cta">
+            <a href="#contact" class="btn-pill-primary btn-full">Join Now</a>
+          </div>
         </nav>
 
-        <a href="#contact" class="hero-nav-cta">Join now</a>
+        <div class="hero-navbar-actions">
+          <a href="#contact" class="hero-nav-cta">Join now</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation" aria-expanded="false">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -118,7 +125,7 @@
           <!-- Left Column: Copy & Actions -->
           <div class="hero-content-col">
             <h1 class="hero-main-title">
-              Looking to <br>
+              Looking to <br class="hero-desktop-br">
               <span class="highlight-magenta">Transform Potential?</span>
               Join with Sulhab
             </h1>
@@ -195,17 +202,17 @@
       </div>
 
       <!-- Who We Are Spotlight Card -->
-      <div class="about-spotlight-card" style="padding: 2.5rem 2.25rem; margin-bottom: 2rem;">
-        <div class="about-spotlight-grid" style="gap: 2.25rem;">
+      <div class="about-spotlight-card">
+        <div class="about-spotlight-grid">
           <div class="about-spotlight-text">
-            <span class="hero-pill-tag" style="margin-bottom: 0.4rem;">Who We Are</span>
-            <h3 style="font-size: 1.85rem;">A Learning, Development & Impact Organisation</h3>
+            <span class="hero-pill-tag">Who We Are</span>
+            <h3>A Learning, Development & Impact Organisation</h3>
           </div>
           <div class="about-spotlight-body">
-            <p style="font-size: 1rem; line-height: 1.7;">
+            <p>
               Sulhab Creative is a learning, development, innovation and impact organisation. We exist to help people turn their potential into real skills, meaningful opportunities and positive change.
             </p>
-            <p style="font-size: 1rem; line-height: 1.7;">
+            <p>
               By offering accessible, structured frameworks across four unified strategic areas, we support learners, job seekers, entrepreneurs, and community leaders in creating lasting, sustainable transformation.
             </p>
           </div>
