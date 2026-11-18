@@ -729,7 +729,7 @@ body.nav-open {
   gap: 12px;
 }
 
-/* Illustration Column */
+/* Visual Column: Realistic Tech Student with Transparent Background */
 .hero-visual-col {
   position: relative;
   display: flex;
@@ -737,12 +737,112 @@ body.nav-open {
   justify-content: center;
 }
 
-.hero-illustration-svg {
+.hero-student-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 580px;
+  max-width: 480px;
+}
+
+.hero-student-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(255, 56, 136, 0.3) 0%, rgba(228, 31, 111, 0.16) 40%, rgba(52, 32, 85, 0) 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-student-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 440px;
   height: auto;
   display: block;
-  transform: scale(1.05);
+  filter: drop-shadow(0 20px 45px rgba(15, 8, 28, 0.6));
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.hero-student-wrapper:hover .hero-student-img {
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Floating Glassmorphic Badges */
+.hero-float-badge {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 50px;
+  box-shadow: 0 14px 34px rgba(18, 9, 32, 0.28), 0 2px 4px rgba(255, 255, 255, 0.5) inset;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  animation: floatSlow 4s ease-in-out infinite alternate;
+}
+
+.hero-float-badge-top {
+  top: 15%;
+  left: -20px;
+  animation-delay: 0s;
+}
+
+.hero-float-badge-bottom {
+  bottom: 12%;
+  right: -20px;
+  animation-delay: 2s;
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.badge-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #342055 0%, #5E3596 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge-icon-wrap.badge-icon-coral {
+  background: linear-gradient(135deg, #FF3888 0%, #E41F6F 100%);
+}
+
+.badge-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.badge-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1B1327;
+  font-family: var(--font-heading);
+}
+
+.badge-sub {
+  font-size: 0.69rem;
+  font-weight: 500;
+  color: #6B6275;
 }
 
 /* Bottom subtle indicator */
@@ -1452,6 +1552,35 @@ textarea.form-control-pill {
   overflow: hidden;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #7A7587;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+  color: #7A7587;
+  transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb-separator {
+  color: #C0BDC7;
+}
+
+.breadcrumb-current {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
 .page-header-title {
   font-size: 3.25rem;
   font-weight: 800;
@@ -1477,6 +1606,7 @@ textarea.form-control-pill {
   grid-template-columns: 1fr 360px;
   gap: 3.5rem;
   margin-top: 4rem;
+  align-items: start;
 }
 
 .detail-main {
@@ -1541,6 +1671,15 @@ textarea.form-control-pill {
   margin: 0;
 }
 
+/* Sidebar & CTA Card */
+.detail-sidebar {
+  position: sticky;
+  top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .sidebar-card {
   background-color: #FFFFFF;
   border: 1px solid #EAE8EE;
@@ -1570,6 +1709,192 @@ textarea.form-control-pill {
 .sidebar-nav-link.active {
   background-color: var(--color-primary-subtle);
   color: var(--color-primary);
+}
+
+.sidebar-cta-card {
+  background-color: #FFFFFF;
+  border: 1.5px solid rgba(228, 31, 111, 0.22);
+  border-radius: 28px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 16px 40px rgba(27, 19, 39, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-cta-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #E41F6F, #FF3888);
+}
+
+.sidebar-badge {
+  display: inline-block;
+  padding: 0.28rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary);
+  background-color: rgba(228, 31, 111, 0.09);
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.sidebar-cta-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #635F70;
+  margin-bottom: 1.35rem;
+}
+
+.sidebar-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.65rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sidebar-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #2D2738;
+}
+
+.sidebar-feature-list li svg {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+}
+
+.sidebar-cta-btn-wrap {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-contact-direct {
+  border-top: 1px solid #EAE8EE;
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.direct-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8C8899;
+}
+
+.direct-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.direct-link:hover {
+  color: var(--color-secondary);
+}
+
+/* Dedicated Full-Width Call to Action Section */
+.career-cta-section {
+  padding: 0 0 5.5rem 0;
+  position: relative;
+}
+
+.career-cta-banner {
+  background: linear-gradient(142deg, #3B2360 0%, #342055 50%, #201335 100%);
+  border-radius: 32px;
+  padding: 4.5rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(52, 32, 85, 0.22);
+}
+
+.career-cta-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 56, 136, 0.25) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.career-cta-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+
+.career-cta-inner .hero-pill-tag {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FF559D;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.career-cta-title {
+  font-size: clamp(2rem, 4.2vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+}
+
+.career-cta-desc {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 2.25rem;
+  max-width: 620px;
+}
+
+.career-cta-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.career-cta-actions .btn-pill-primary {
+  background: linear-gradient(135deg, #FF3888 0%, #E41F6F 100%);
+  box-shadow: 0 8px 24px rgba(228, 31, 111, 0.42);
+  color: #FFFFFF;
+}
+
+.career-cta-actions .btn-pill-primary:hover {
+  background: linear-gradient(135deg, #FF559D 0%, #F5186E 100%);
+  box-shadow: 0 12px 28px rgba(228, 31, 111, 0.58);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+.career-cta-actions .btn-pill-secondary {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+}
+
+.career-cta-actions .btn-pill-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #FFFFFF;
 }
 
 .pathway-card {
@@ -1659,13 +1984,23 @@ textarea.form-control-pill {
   .hero-visual-col {
     display: flex;
     justify-content: center;
-    margin: 0.5rem auto 0 auto;
+    margin: 1.5rem auto 0 auto;
   }
 
-  .hero-illustration-svg {
-    max-width: 440px;
-    transform: none;
-    width: 100%;
+  .hero-student-wrapper {
+    max-width: 420px;
+  }
+
+  .hero-student-img {
+    max-width: 380px;
+  }
+
+  .hero-float-badge-top {
+    left: -5px;
+  }
+
+  .hero-float-badge-bottom {
+    right: -5px;
   }
 
   /* About Spotlight Card */
@@ -1737,6 +2072,24 @@ textarea.form-control-pill {
 
   .footer-brand p {
     max-width: 500px;
+  }
+
+  /* Detail Pages & CTA Banner on Tablet */
+  .detail-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+
+  .detail-sidebar {
+    position: static;
+    max-width: 580px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .career-cta-banner {
+    padding: 3.5rem 2.5rem;
   }
 }
 
@@ -1982,10 +2335,46 @@ textarea.form-control-pill {
     justify-content: center;
   }
 
-  .hero-illustration-svg {
-    max-width: min(340px, 86vw);
-    margin: 1.25rem auto 0 auto;
-    transform: none;
+  .hero-student-wrapper {
+    max-width: 360px;
+    margin: 1.5rem auto 0 auto;
+  }
+
+  .hero-student-img {
+    max-width: 320px;
+  }
+
+  .hero-float-badge {
+    padding: 7px 12px;
+    gap: 8px;
+  }
+
+  .badge-icon-wrap {
+    width: 28px;
+    height: 28px;
+  }
+
+  .badge-icon-wrap svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badge-title {
+    font-size: 0.74rem;
+  }
+
+  .badge-sub {
+    font-size: 0.63rem;
+  }
+
+  .hero-float-badge-top {
+    left: 0;
+    top: 8%;
+  }
+
+  .hero-float-badge-bottom {
+    right: 0;
+    bottom: 6%;
   }
 
   /* Tucked ambient doodles so they don't visually clash on mobile */
@@ -2182,6 +2571,86 @@ textarea.form-control-pill {
     transform: scale(0.65);
     opacity: 0.35;
   }
+
+  /* Detail Pages & CTA Banner on Mobile */
+  .page-header-section {
+    padding: 3.5rem 0 2.5rem 0;
+  }
+
+  .page-header-title {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .page-header-lead {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .detail-content-grid {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .detail-block {
+    padding: 2rem 1.5rem;
+    border-radius: 22px;
+  }
+
+  .detail-block h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .detail-block p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .pathway-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .sidebar-cta-card {
+    padding: 1.85rem 1.4rem;
+    border-radius: 22px;
+  }
+
+  .career-cta-section {
+    padding-bottom: 4rem;
+  }
+
+  .career-cta-banner {
+    padding: 2.75rem 1.75rem;
+    border-radius: 24px;
+  }
+
+  .career-cta-title {
+    font-size: 1.65rem;
+    line-height: 1.25;
+  }
+
+  .career-cta-desc {
+    font-size: 0.98rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .career-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .career-cta-actions .btn-pill-primary,
+  .career-cta-actions .btn-pill-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-desktop-br {
+    display: none;
+  }
 }
 
 /* 4. Small Mobile Phones (max-width: 480px) */
@@ -2252,9 +2721,23 @@ textarea.form-control-pill {
     max-width: 100%;
   }
 
-  .hero-illustration-svg {
-    max-width: min(290px, 88vw);
+  .hero-student-wrapper {
+    max-width: 290px;
     margin-top: 1rem;
+  }
+
+  .hero-student-img {
+    max-width: min(270px, 86vw);
+  }
+
+  .hero-float-badge-top {
+    top: 4%;
+    left: -4px;
+  }
+
+  .hero-float-badge-bottom {
+    bottom: 2%;
+    right: -4px;
   }
 
   .hero-scroll-cue {
@@ -2288,5 +2771,28 @@ textarea.form-control-pill {
   .contact-form-card {
     padding: 1.4rem 1.1rem;
     border-radius: 16px;
+  }
+
+  .page-header-section {
+    padding: 2.75rem 0 2rem 0;
+  }
+
+  .detail-block {
+    padding: 1.5rem 1.15rem;
+    border-radius: 18px;
+  }
+
+  .sidebar-cta-card {
+    padding: 1.5rem 1.15rem;
+    border-radius: 18px;
+  }
+
+  .career-cta-banner {
+    padding: 2.25rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .career-cta-title {
+    font-size: 1.45rem;
   }
 }
